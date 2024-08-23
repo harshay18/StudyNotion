@@ -13,6 +13,9 @@ const { cloudinaryConnect } = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 
+
+
+// app.use(cors());
 // Setting up port number
 const PORT = process.env.PORT || 4000;
 
@@ -31,7 +34,7 @@ app.use(
 		credentials: true,
 	})
 );
-app.use(
+app.use(   
 	fileUpload({
 		useTempFiles: true,
 		tempFileDir: "/tmp/",
